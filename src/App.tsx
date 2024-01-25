@@ -47,7 +47,7 @@ function App() {
     ListTemplateLayer | undefined
   >(undefined);
 
-  const [payload, setPayload] = useState<any>(); //eslint-disable-line
+  const [payload, setPayload] = useState<any>({}); //eslint-disable-line
 
   const [templateId, setTemplateId] = useState("");
 
@@ -107,7 +107,7 @@ function App() {
   useEffect(() => {
     getListTemplate(); // Call the async function immediately
   }, []);
-
+  console.log(payload);
   return (
     <>
       <div>
@@ -130,10 +130,9 @@ function App() {
                           //eslint-disable-next-line
                           setPayload((prev: any) => {
                             const newParams = prev;
-                            if (newParams) {
-                              newParams[layer.layer] = { text: e.target.value }; //eslint-disable-line
-                              return newParams;
-                            }
+
+                            newParams[layer.layer] = { text: e.target.value }; //eslint-disable-line
+                            return newParams;
                           });
                         }}
                       />
