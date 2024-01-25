@@ -38,7 +38,7 @@ export interface ITemplate {
   updatedAt: string;
 }
 
-const API_KEY = "a99c77e5-3cbf-4dfb-be6a-3fc791a6b1b4";
+const API_KEY = "a4e4c162-7d77-42ee-acb1-be8ebb463b0c";
 function App() {
   const [listTemplates, setListTemplates] = useState<ListTemplate | undefined>(
     undefined
